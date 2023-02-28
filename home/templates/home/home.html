@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+
+<div id="intro">
+       <h4><i>Predicting Student's performance in a Mathematics test. <br>You can scale your test to 20 using the formula, score = (original score) x 20/(overall of original test)</i></h4>
+</div>
+
+<div id="test_links_div">
+        <a href="https://www.math-only-math.com/online-math-quiz.html">Take an Math Qiuz </a>
+        <br>
+        <a href="https://www.med.soton.ac.uk/stats_eLearning/quizzes/index.html"> Take a Statistics Quiz </a>
+</div>
+
+
+<!-- data = data[["G3", "G1", "G2", "Fedu", "Medu", "studytime", "sex"]] -->
+<div id="main_content">
+    <div id="metrics">
+        <form id="form" method="GET">
+            <!-- <p> First Grade</p>
+            <p><input name="first_grade" type="number"></p>
+
+            <p> Second Grade</p>
+            <p><p><input name="second_grade" type="number"></p>
+
+            <p> Father's Education</p>
+            <p>
+                <select name="fathers_education">
+                    <option value="0">None</option>
+                    <option value="1">Primary(4th grade)</option>
+                    <option value="2">Primary(5th - 9th grade)</option>
+                    <option value="3">Secondary</option>
+                    <option value="4">Tertiary</option>
+                </select>
+            </p>
+
+            <p> Mother's Eduction</p>
+            <p>
+                <select name="mothers_education">
+                    <option value="0">None</option>
+                    <option value="1">Primary(4th grade)</option>
+                    <option value="2">Primary(5th - 9th grade)</option>
+                    <option value="3">Secondary</option>
+                    <option value="4">Tertiary</option>
+                </select>
+            </p>
+
+            <p> Study Time</p>
+            <p><input name="study_time" type="number"></p>
+
+            <p>Sex</p>
+            <p>
+                <select name="sex">
+                    <option value="1">Female</option>
+                    <option value="2">Male</option>
+                </select>
+            </p>
+
+            <p><input type="submit" value="predict score"></p> -->
+
+
+          {% for field in form %}
+                {% if form.error %}
+                    <p>{{form.error}}</p>
+                {% endif %}
+                <p>{{field.label}}</p>
+                <p>{{field}}</p>
+            {% endfor %}
+            <input id="submit" type="submit" value="Predict">
+
+        </form>
+    </div>
+
+    <div id="result_div">
+        {% if result != rNone %}
+        <p id="result">Score = {{result.score}} of 20 <br> <i id="percent_result">({{percent_result}}%)<i></p>
+        {% else %}
+            <p id="result">No Result Yet</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

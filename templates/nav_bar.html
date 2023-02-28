@@ -1,0 +1,19 @@
+{% load static %}
+<div id="nav">
+  <h2>MATH PERFORMANCE PREDICTOR</h2>
+   <a href="/">
+       <img id="home" src="{% static 'images/home2.png' %}" height="25px;" width="25px;">
+   </a>
+   <div id="menu" style="position: relative;">
+       <img src="{% static 'images/menu.png' %}" height="20px;" width="20px;">
+       <div id="menu_content">
+           <a href="{% url 'about' %}">About</a>
+           <hr>
+           <a href="{% url 'contact' %}">Contact</a>
+           <hr>
+           <a href="https://www.math-only-math.com/online-math-quiz.html">Take a Math Quiz</a>
+           <hr>
+           <a href="https://www.med.soton.ac.uk/stats_eLearning/quizzes/index.html"> Take a Statistics Quiz </a>
+       </div>
+   </div>
+</div>
