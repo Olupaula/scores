@@ -30,7 +30,7 @@ The Linear Regression Model was used for this work.
 Coefficient of Determination was used to evaluate the Machine learning model.
 
 ### Limitation of the Project:
-The project was aimed at showing how I can integrate my ML skills with my web development skills and may not contain any sophistication as may be observee in either fields. 
+The project was aimed at showing how I can integrate my ML skills with my web development skills and may not contain any sophistication as may be observed in either fields. 
 
 
 
