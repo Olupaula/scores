@@ -8,7 +8,7 @@ students in a mathematics test.
 2. JavaScript (Vanila):
    - Ajax 
 3. Html:
-4.css
+4. css
 
 ## Machine Learning 
 packages used:
